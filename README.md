@@ -9,7 +9,7 @@ With Magento 2 Indian GST extension, you can apply GST based on the different ta
 Get the Best Magento 2 GST India Extension to apply GST in your stores without any errors and in accordance with the Indian government rules!
 
 
-**Features of Magento 2 GST India:**
+## Features of Magento 2 GST India:
 
 * Product specific or global GST.
 * Add buyer GSTIN from the frontend.
