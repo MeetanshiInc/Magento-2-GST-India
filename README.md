@@ -80,4 +80,5 @@ Under ```Stores > Configuration > Sales > Tax > Tax Classes```, select your pref
 Double-check that the Use System Value checkbox is selected for all other options to maintain default configurations.
 ### Step1: Enable the extension & configure
 For configuring the GST India extension, log in to Magento 2 and navigate to Stores > Configuration where you’ll find settings to manage the extension:
-!
+![enable the extension and configure](images1/Enable the extension & configure.png)
+
