@@ -1,7 +1,7 @@
 # Magento 2 GST India
 The __Magento 2 GST India Extension__ is designed specifically for Indian merchants to streamline GST calculations, automate tax management, and ensure accurate invoicing as per the latest Indian tax regulations. 
 This extension enhances Magento 2 stores by automating GST calculations for Indian businesses, ensuring accurate tax implementation, seamless invoicing and efficient operations.
-## How It Works+
+## How It Works
 The __Magento 2 GST Extension__ integrates GST compliance seamlessly into your Magento 2 store. It automatically calculates GST based on product type, tax slabs, and customer location, updating the tax rates at checkout and on invoices. 
 This saves time and eliminates the need for manual tax calculations, offering a smooth experience for customers and merchants alike.
 ## Key Features
@@ -80,5 +80,47 @@ Under ```Stores > Configuration > Sales > Tax > Tax Classes```, select your pref
 Double-check that the Use System Value checkbox is selected for all other options to maintain default configurations.
 ### Step1: Enable the extension & configure
 For configuring the GST India extension, log in to Magento 2 and navigate to Stores > Configuration where you’ll find settings to manage the extension:
-![enable the extension and configure](images1/Enable the extension & configure.png)
+![enable the extension and configure](https://github.com/MeetanshiInc/Magento-2-GST-India/blob/main/images1/Enable%20the%20extension%20%26%20configure.png)
+
+- __GST India:__ Enable or disable the extension.
+Allow Buyers Adding GSTIN: Set to "Yes" to allow buyers to add their GSTIN, displaying it in orders, invoices, and PDFs. To show the Buyer GSTIN in these documents, add the following code under Stores > Configuration > Customers > Customer Configuration > Address Templates:
+```
+{{depend buyer_gst_number}}Buyer GSTIN: {{var buyer_gst_number}}{{/depend}}
+```
+- __Business Information:__ Add your GSTIN, CIN, and PAN to include in all order-related documents.
+- __GST Rate:__ Define the GST rate and specify a minimum product price for applying GST. Set a separate rate for products below this price.
+- __Business Origin:__ Specify your business's state of origin for automatic GST calculations (SGST, CGST for intra-state; IGST for inter-state).
+- __Catalog Price Display:__ Choose whether product prices are Inclusive (GST already included) or Exclusive (GST added separately).
+- __Digital Signature:__ Upload a signature image and specify a signature line to display in invoice PDFs.
+### Step 2: Shipping GST Settings
+- __Shipping GST:__ Enable GST on shipping fees.
+- __Shipping GST Rate:__ Define the GST rate applied to shipping costs.
+- __Shipping Class for GST:__ Specify a shipping class to categorize GST rates for shipping charges.
+![Shipping GST Settings](https://github.com/MeetanshiInc/Magento-2-GST-India/blob/main/images1/shipping-gst-settings.png)
+### Step 3: Category-Specific GST
+![categorry](https://github.com/MeetanshiInc/Magento-2-GST-India/blob/main/images1/category-specific.png)
+Assign GST rates to specific product categories to automate GST calculations based on product classification.
+### Step 4: Product-Specific GST
+![Product-specific](https://github.com/MeetanshiInc/Magento-2-GST-India/blob/main/images1/product-specific.png)
+Set GST rates for individual products in cases where the product’s GST rate differs from the default or category-specific rate.
+### Step 5: GST India on the Frontend
+![gst-on-the-frondend](https://github.com/MeetanshiInc/Magento-2-GST-India/blob/main/images1/gst-india-on-the-frondend.png)
+Displays GST breakup on the cart and checkout pages, showing CGST, SGST, and IGST values based on the customer’s location.
+### Step 6: GST in Order View (Backend)
+![gst-in-order-view-backend](https://github.com/MeetanshiInc/Magento-2-GST-India/blob/main/images1/gst-in-order-view-backend.png)
+GST details appear on the order view in the Magento admin panel, showing the tax split (CGST, SGST, IGST) applied to each order.
+### Step 7: GST in Order Email
+![gst-in-order-email](https://github.com/MeetanshiInc/Magento-2-GST-India/blob/main/images1/gst-in-order-email.png)
+GST details are included in order confirmation emails, offering customers a complete breakdown of taxes applied.
+### Step 8: GST in Admin Orders
+![gst-in-admin-order](https://github.com/MeetanshiInc/Magento-2-GST-India/blob/main/images1/gst-admin-order.png)
+Allows admins to view detailed GST information for each order, including tax breakdowns per product and total GST applied.
+### Step 9: GST Orders Report
+![gst-order-report](https://github.com/MeetanshiInc/Magento-2-GST-India/blob/main/images1/gst-order-report.png)
+Provides a GST report in the Magento backend to analyze GST collected across orders. It includes the GST split (CGST, SGST, IGST) and can be used for filing GST returns.
+## Download our [Magento 2 GST India Extension](https://meetanshi.com/magento-2-indian-gst.html?srsltid=AfmBOoqT50TiP8bgp87uykvS_bSlJ05PPwJB8AkAfN9tv6Til9xLoOaU)
+
+
+
+
 
